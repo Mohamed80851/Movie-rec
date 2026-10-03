@@ -3,9 +3,9 @@
 #include <limits>
 
 using namespace std;
-
+              
 void printDivider() {
-    cout << "\n============================================================\n";
+     cout << "\n============================================================\n";
 }
 
 void printSubDivider() {
@@ -118,7 +118,7 @@ int main() {
         cin >> retry;
         
     } while (retry == 'y' || retry == 'Y');
-
+    
     printDivider();
     cout << "      Thank you for using the Cine-Match Recommendation System!      \n";
     printDivider();
@@ -126,3 +126,4 @@ int main() {
     
     return 0;
 }
+
