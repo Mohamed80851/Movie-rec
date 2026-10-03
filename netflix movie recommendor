@@ -1,0 +1,128 @@
+#include <iostream>
+#include <string>
+#include <limits>
+
+using namespace std;
+
+void printDivider() {
+    cout << "\n============================================================\n";
+}
+
+void printSubDivider() {
+    cout << "------------------------------------------------------------\n";
+}
+
+int main() {
+    int genreChoice;
+    int movieChoice;
+    char retry;
+
+    do {
+        printDivider();
+        cout << "           NETFLIX CINE-MATCH RECOMMENDATION SYSTEM           \n";
+        printDivider();
+        
+        cout << "Select a cinematic experience:\n\n";
+        cout << "  [1] Sci-Fi & Cyberpunk\n";
+        cout << "  [2] Action & Adrenaline\n";
+        cout << "  [3] Mind-Bending Thrillers\n";
+        cout << "  [4] Comedy & Satire\n";
+        cout << "  [5] Music, Gaming & Culture Documentaries\n\n";
+        cout << "Enter your choice (1-5): ";
+        
+        cin >> genreChoice;
+
+        if (cin.fail()) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cout << "\n[!] SYSTEM ERROR: Invalid input. Please enter a number from 1 to 5.\n";
+            continue; 
+        }
+
+        printSubDivider();
+        
+        // GENRE SELECTION
+        if (genreChoice >= 1 && genreChoice <= 5) {
+            if (genreChoice == 1) {
+                cout << ">>> SELECTED: SCI-FI & CYBERPUNK <<<\n\n";
+                cout << "1. The Matrix\n2. Interstellar\n3. Blade Runner 2049\n4. Inception\n5. Dune\n";
+            } else if (genreChoice == 2) {
+                cout << ">>> SELECTED: ACTION & ADRENALINE <<<\n\n";
+                cout << "1. Mad Max: Fury Road\n2. John Wick\n3. The Dark Knight\n4. Extraction\n5. Gladiator\n";
+            } else if (genreChoice == 3) {
+                cout << ">>> SELECTED: MIND-BENDING THRILLERS <<<\n\n";
+                cout << "1. Get Out\n2. Se7en\n3. Shutter Island\n4. A Quiet Place\n5. The Silence of the Lambs\n";
+            } else if (genreChoice == 4) {
+                cout << ">>> SELECTED: COMEDY & SATIRE <<<\n\n";
+                cout << "1. Glass Onion: A Knives Out Mystery\n2. Superbad\n3. The Grand Budapest Hotel\n4. Step Brothers\n5. Tropic Thunder\n";
+            } else if (genreChoice == 5) {
+                cout << ">>> SELECTED: MUSIC, GAMING & CULTURE <<<\n\n";
+                cout << "1. Jeen-Yuhs: A Kanye Trilogy\n2. Free to Play\n3. The Social Dilemma\n4. Travis Scott: Look Mom I Can Fly\n5. Fyre Festival\n";
+            }
+
+            cout << "\nSelect a movie to read its bio (1-5): ";
+            cin >> movieChoice;
+
+            if (cin.fail()) {
+                cin.clear(); 
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+                cout << "\n[!] SYSTEM ERROR: Invalid input.\n";
+                continue; 
+            }
+
+            printSubDivider();
+            
+            // MOVIE BIO OUTPUT
+            if (genreChoice == 1) {
+                if (movieChoice == 1) cout << "The Matrix\nBio: A hacker discovers the shocking truth that humanity is unknowingly trapped in a simulated reality.\n";
+                else if (movieChoice == 2) cout << "Interstellar\nBio: Explorers travel through a wormhole in space in a desperate attempt to ensure humanity's survival.\n";
+                else if (movieChoice == 3) cout << "Blade Runner 2049\nBio: A new blade runner uncovers a long-buried secret that has the potential to plunge society into chaos.\n";
+                else if (movieChoice == 4) cout << "Inception\nBio: A skilled thief is given a final chance at redemption if he can successfully plant an idea into a target's subconscious.\n";
+                else if (movieChoice == 5) cout << "Dune\nBio: A noble family becomes embroiled in a war for control over the galaxy's most valuable asset and deadliest planet.\n";
+                else cout << "[!] Invalid movie choice.\n";
+            } else if (genreChoice == 2) {
+                if (movieChoice == 1) cout << "Mad Max: Fury Road\nBio: A woman rebels against a tyrannical ruler in a post-apocalyptic wasteland in search of her homeland.\n";
+                else if (movieChoice == 2) cout << "John Wick\nBio: An ex-hitman comes out of retirement to track down the gangsters that took everything from him.\n";
+                else if (movieChoice == 3) cout << "The Dark Knight\nBio: Batman faces his greatest psychological and physical test against the chaotic criminal mastermind known as the Joker.\n";
+                else if (movieChoice == 4) cout << "Extraction\nBio: A hardened mercenary's mission becomes a soul-searching race to survive when he is sent to rescue a kidnapped boy.\n";
+                else if (movieChoice == 5) cout << "Gladiator\nBio: A betrayed Roman general seeks revenge against the corrupt emperor who murdered his family and sent him into slavery.\n";
+                else cout << "[!] Invalid movie choice.\n";
+            } else if (genreChoice == 3) {
+                if (movieChoice == 1) cout << "Get Out\nBio: A young man visits his girlfriend's parents for the weekend, only to uncover a disturbing and horrifying secret.\n";
+                else if (movieChoice == 2) cout << "Se7en\nBio: Two detectives hunt a brilliant and elusive serial killer who uses the seven deadly sins as his gruesome motives.\n";
+                else if (movieChoice == 3) cout << "Shutter Island\nBio: A U.S. Marshal investigates the mysterious disappearance of a murderer from a remote hospital for the criminally insane.\n";
+                else if (movieChoice == 4) cout << "A Quiet Place\nBio: A family struggles for survival in a post-apocalyptic world terrorized by blind, noise-sensitive creatures.\n";
+                else if (movieChoice == 5) cout << "The Silence of the Lambs\nBio: A young F.B.I. cadet must seek the help of an incarcerated and manipulative cannibal to catch a new serial killer.\n";
+                else cout << "[!] Invalid movie choice.\n";
+            } else if (genreChoice == 4) {
+                if (movieChoice == 1) cout << "Glass Onion: A Knives Out Mystery\nBio: World-famous detective Benoit Blanc travels to a private Greek island to peel back the layers of a deadly new mystery.\n";
+                else if (movieChoice == 2) cout << "Superbad\nBio: Two co-dependent high school seniors navigate separation anxiety while trying to secure alcohol for a massive party.\n";
+                else if (movieChoice == 3) cout << "The Grand Budapest Hotel\nBio: The eccentric concierge of a famous European hotel gets caught up in a chaotic battle over a massive family fortune.\n";
+                else if (movieChoice == 4) cout << "Step Brothers\nBio: Two aimless, middle-aged losers still living at home are forced to become roommates when their parents marry.\n";
+                else if (movieChoice == 5) cout << "Tropic Thunder\nBio: A pampered crew of actors shooting a massive war movie are unwittingly forced to become the very soldiers they are portraying.\n";
+                else cout << "[!] Invalid movie choice.\n";
+            } else if (genreChoice == 5) {
+                if (movieChoice == 1) cout << "Jeen-Yuhs: A Kanye Trilogy\nBio: An intimate and revealing three-part documentary chronicling the formative days and massive rise of Kanye West.\n";
+                else if (movieChoice == 2) cout << "Free to Play\nBio: A documentary following three professional video game players overcoming adversity to compete in a million-dollar eSports tournament.\n";
+                else if (movieChoice == 3) cout << "The Social Dilemma\nBio: Tech experts sound the alarm on the dangerous human impact of social networking and algorithmic manipulation.\n";
+                else if (movieChoice == 4) cout << "Travis Scott: Look Mom I Can Fly\nBio: Follows the Houston rapper's massive rise to fame as he crafts his Grammy-nominated album, Astroworld.\n";
+                else if (movieChoice == 5) cout << "Fyre Festival\nBio: The spectacular unraveling of a luxury music festival in the Bahamas that left wealthy attendees stranded in disaster tents.\n";
+                else cout << "[!] Invalid movie choice.\n";
+            }
+        } else {
+            cout << "[!] Invalid genre choice! Please select a valid number from the menu.\n";
+        }
+        
+        printSubDivider();
+        cout << "Would you like to explore another category? (y/n): ";
+        cin >> retry;
+        
+    } while (retry == 'y' || retry == 'Y');
+
+    printDivider();
+    cout << "      Thank you for using the Cine-Match Recommendation System!      \n";
+    printDivider();
+    cout << "\n";
+    
+    return 0;
+}
