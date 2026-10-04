@@ -30,6 +30,7 @@ int main() {
         cout << "  [5] Music, Gaming & Culture Documentaries\n\n";
         cout << "Enter your choice (1-5): ";
         
+   // Validates genre input and handles invalid entries
         cin >> genreChoice;
 
         if (cin.fail()) {
