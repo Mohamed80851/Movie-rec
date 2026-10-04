@@ -75,6 +75,7 @@ int main() {
             
             // MOVIE BIO OUTPUT
             if (genreChoice == 1) {
+   // Displays the selected movie's title and description
                 if (movieChoice == 1) cout << "The Matrix\nBio: A hacker discovers the shocking truth that humanity is unknowingly trapped in a simulated reality.\n";
                 else if (movieChoice == 2) cout << "Interstellar\nBio: Explorers travel through a wormhole in space in a desperate attempt to ensure humanity's survival.\n";
                 else if (movieChoice == 3) cout << "Blade Runner 2049\nBio: A new blade runner uncovers a long-buried secret that has the potential to plunge society into chaos.\n";
